@@ -1,28 +1,44 @@
-@import "../../responsive.scss";
 
+@import "../../responsive.scss";
 nav{
-    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100px;
 
     a{
         transition: all 0.4s ease;
-
         @include sm{
             display: none;
         }
+
+
         &:hover{
             scale: 1.05;
         }
     }
-
     .left{
-        flex: 3;
+        flex : 3;
         display: flex;
         align-items: center;
-        gap: 50px;
+        gap:50px
 
+
+    }
+    .logo{
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        img{
+            width: 28px;
+        }
+        gap: 10px;
+        span{
+            @include md{
+                display: none;
+
+<<<<<<< HEAD
         .logo{
             font-weight: bold;
             font-size: 20px;
@@ -33,51 +49,44 @@ nav{
             img{
                 width: 100px;
                 height: 36px;
+=======
+>>>>>>> 30ac163230896cbee6e628a917b27279adb5cf59
             }
-
-            span{
-                @include md{
-                    display: none;
-                }
-                @include sm{
-                    display: initial ;
-                }
+            @include sm{
+                display: initial;
             }
         }
     }
     .right{
         flex: 2;
         display: flex;
-        align-content: center;
+        align-items: center;
         justify-content: flex-end;
         background-color: #fcf5f3;
         height: 100%;
-
         @include md{
             background-color: transparent;
+
+        }
+        a{
+            padding: 12px  24px;
         }
 
-        a {
-            padding: 12px 24px;
-            margin: 20px;
-        }
-        
-        .register {
-            background-color: #fece51;
+        .register{
+            background-color:rgb(216, 221, 59);
         }
         .menuIcon{
-            display: none;
-            z-index: 999;
+             display: none;
+             z-index: 999;
+             @include sm{
+                display: inline;
 
-            img{
+             }
+             img{
                 width: 36px;
                 height: 36px;
                 cursor: pointer;
-            }
-
-            @include sm{
-                display: inline;
-            }
+             }
         }
         .menu{
             position: absolute;
@@ -93,16 +102,19 @@ nav{
             align-items: center;
             justify-content: center;
             font-size: 24px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 30ac163230896cbee6e628a917b27279adb5cf59
             &.active{
-                right : 0;
+                right: 0;
             }
-
             @include sm{
                 a{
                     display: initial;
                 }
             }
         }
-    }
+
+    }       
 }
