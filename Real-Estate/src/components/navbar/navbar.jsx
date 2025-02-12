@@ -8,8 +8,8 @@ function Navbar(){
         <nav>
             <div className="left">
                 <a href="/" className="logo">
-                    <img src="logo1.png" alt="Logo"/>
-                    <span>GharDekho</span>
+                    <img src="icon1.png" alt="Logo"/>
+                    {/* <span>PoojaRealEstate</span> */}
                 </a>
                 <a href="/">Home</a>
                 <a href="/">About</a>
