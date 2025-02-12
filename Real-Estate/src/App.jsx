@@ -1,53 +1,65 @@
-import Navbar from "./components/navbar/navbar"
+// App.jsx
+import Navbar from "./components/navbar/navbar";
 import "./layout.scss";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import HomePage from "./routes/homePage"
+
+import HomePage from "./routes/homePage";
 import ListPage from "./routes/listPage/listpage";
-import Layout from "./routes/layout/layout";
+import { Layout, RequireAuth } from "./routes/layout/layout"; // Adjust import statement
 import SinglePage from "./routes/singlePage/singlepage";
-function App(){
+import Login from "./routes/login/login";
+import Register from "./routes/register/register";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ProfilePage from "./routes/profilePage/profilePage";
+import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
+
+function App() {
   const router = createBrowserRouter([
     {
-      path:"/",
+      path: "/",
       element: <Layout />,
-      children:[
+      children: [
         {
-          path:"/",
-          element: <HomePage />
-
+          path: "/",
+          element: <HomePage />,
         },
         {
-          path:"/list",
-          element: <ListPage />
-
+          path: "/list",
+          element: <ListPage />,
         },
-     
         {
-          path:"/:id",
-          element: <SinglePage />
-
-        },  
-      
-
-      ]
-
-    }
+          path: "/:id",
+          element: <SinglePage />,
+        },
+        {
+          path: "/login",
+          element: <Login />,
+        },
+        {
+          path: "/register",
+          element: <Register />,
+        },
+        {
+          path: "/profile",
+          element: (
+           <RequireAuth>
+            <ProfilePage />
+           </RequireAuth>
+          ),
+        },
+        {
+          path: "/profile/update",
+          element: (
+            <RequireAuth>
+              <ProfileUpdatePage />
+            </RequireAuth>
+          ),
+        },
+      ],
+    },
   ]);
-  return (
-    // <div className="layout">
-    //   <div className="navbar">
-    //   <Navbar />
-    //   </div>
-    //   <div className="content">
-    //   <HomePage />
-      
-    //   </div>
-    //   </div>
-    <RouterProvider router = {router}/>
-  );
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -17,8 +17,8 @@ function Navbar(){
                 <a href="/">Agents</a>
             </div>
             <div className="right">
-            <a href="/">Sign In</a>
-            <a href="/" className="register">Sign Up</a>
+            <a href="/login">Sign In</a>
+            <a href="/register" className="register">Sign Up</a>
             <div className="menuIcon">
                 <img src="/menu.png" alt="" onClick={()=>setOpen((prev) => !prev)}></img>
             </div>
@@ -27,8 +27,8 @@ function Navbar(){
                 <a href="/">About</a>
                 <a href="/">Contact</a>
                 <a href="/">Agents</a>
-                <a href="/">Sign In</a>
-                <a href="/">Sign Up</a>
+                <a href="/login">Sign In</a>
+                <a href="/register">Sign Up</a>
             </div>
         </div>
         </nav>
