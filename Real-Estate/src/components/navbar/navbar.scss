@@ -1,6 +1,8 @@
 @import "../../responsive.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&family=Cinzel:wght@400;700&display=swap');
 
 nav{
+    font-family: 'Montserrat', sans-serif; // Default font to 'Montserrat'
     height: 100px;
     display: flex;
     justify-content: space-between;
