@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import SearchBar from '../components/navbar/searchbar/searchbar';
+import Footer from '../components/footer/footer';
 import './homePage.scss';
 
 function Counter({ target }) {
@@ -57,7 +58,7 @@ function HomePage() {
                 </div>
             </div>
             <div className="imagecontainer">    
-                <img src="bg.png" alt="" />
+                <img src="home_img.png" alt="" />
             </div>
         </div>
     );

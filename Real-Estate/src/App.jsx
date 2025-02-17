@@ -12,6 +12,8 @@ import Register from "./routes/register/register";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProfilePage from "./routes/profilePage/profilePage";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
+import About from "./routes/about/about";
+import Contact from "./routes/contact/Contact";
 
 function App() {
   const router = createBrowserRouter([
@@ -34,6 +36,14 @@ function App() {
         {
           path: "/login",
           element: <Login />,
+        },
+        {
+          path: "/about",
+          element: <About />,
+        },
+        {
+        path: "/contact",
+        element: <Contact />,
         },
         {
           path: "/register",
