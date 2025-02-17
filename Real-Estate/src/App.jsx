@@ -14,6 +14,7 @@ import ProfilePage from "./routes/profilePage/profilePage";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
 import About from "./routes/about/about";
 import Contact from "./routes/contact/Contact";
+import PropertyBooking from "./routes/booking/PropertyBooking";
 
 function App() {
   const router = createBrowserRouter([
@@ -40,6 +41,10 @@ function App() {
         {
           path: "/about",
           element: <About />,
+        },
+        {
+          path: "/booking",
+          element: <PropertyBooking />,
         },
         {
         path: "/contact",
