@@ -50,7 +50,7 @@ function Register() {
         </form>
       </div>
       <div className="imgContainer">
-        <img src="/bg.png" alt="" />
+        <img src="/output.gif" alt="" />
       </div>
     </div>
   );

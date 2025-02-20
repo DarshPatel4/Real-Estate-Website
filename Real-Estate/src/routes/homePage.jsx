@@ -58,7 +58,7 @@ function HomePage() {
                 </div>
             </div>
             <div className="imagecontainer">    
-                <img src="home_img.png" alt="" />
+                <img src="output.gif" alt="" />
             </div>
         </div>
     );
