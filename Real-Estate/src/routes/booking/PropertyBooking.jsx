@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import "./PropertyBooking.scss";
+import BookingConfirmation from "../../components/bookingConfirmation/BookingConfirmation";
+import emailjs from '@emailjs/browser';
 
 const PropertyBooking = () => {
   const [selectedDate, setSelectedDate] = useState("Mon 29");
   const [selectedTime, setSelectedTime] = useState(null);
   const [currentImage, setCurrentImage] = useState(0);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const propertyImages = [
     "/public/property/prop1.webp",
@@ -24,6 +27,45 @@ const PropertyBooking = () => {
       const prevImage = () => {
         setCurrentImage((prev) => (prev - 1 + propertyImages.length) % propertyImages.length);
       };
+
+  const sendConfirmationEmail = () => {
+    const templateParams = {
+      to_email: "darshpatel2531@gmail.com",
+      booking_date: selectedDate,
+      booking_time: selectedTime,
+      property_name: "Luxury Villa",
+      property_address: "1234 Beverly Hills, CA 90210",
+      contact_number: "(555) 123-4567",
+      booking_reference: `BOOK-${Date.now().toString(36)}`,
+    };
+
+    emailjs.send(
+      'service_7jv2zon', // Replace with your EmailJS service ID
+      'template_6kvaict', // Replace with your EmailJS template ID
+      templateParams,
+      '4WiDtRhJy787_BBld' // Replace with your EmailJS public key
+    )
+    .then((response) => {
+      console.log('Email sent successfully:', response);
+    })
+    .catch((error) => {
+      console.error('Email sending failed:', error);
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!selectedTime) {
+      alert("Please select a time slot");
+      return;
+    }
+    
+    // Send confirmation email
+    sendConfirmationEmail();
+    
+    // Show confirmation popup
+    setShowConfirmation(true);
+  };
 
   return (
     <div className="property-booking-container">
@@ -79,7 +121,9 @@ const PropertyBooking = () => {
           </div>
         </div>
 
-        <button className="book-button">Confirm Booking</button>
+        <form onSubmit={handleSubmit}>
+          <button type="submit" className="book-button">Confirm Booking</button>
+        </form>
       </div>
 
       {/* Property Details */}
@@ -97,6 +141,12 @@ const PropertyBooking = () => {
         <p><strong>Contact:</strong> (555) 123-4567</p>
         <p><strong>Email:</strong> contact@eliterealty.com</p>
       </div>
+
+      {/* Add the confirmation popup */}
+      <BookingConfirmation 
+        isOpen={showConfirmation} 
+        onClose={() => setShowConfirmation(false)}
+      />
     </div>
   );
 };
