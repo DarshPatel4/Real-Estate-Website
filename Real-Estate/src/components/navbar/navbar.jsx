@@ -14,7 +14,12 @@ function Navbar(){
                 <a href="/">Home</a>
                 <a href="/about">About</a>
                 <a href="/Contact">Contact</a>
-                <a href="/">Agents</a>
+                {/* <a href="/agents">Agents</a> */}
+                <a href="/reviews">Reviews</a>
+                <a href="/rates-trends">Rates & Trends</a>
+                <a href="/emi-calculator">EMI Calculator</a>
+                {/* <a href="/loan-eligibility">Loan Eligibility</a>
+                <a href="/area-converter">Area Converter</a> */}
             </div>
             <div className="right">
             <a href="/login">Sign In</a>
@@ -26,7 +31,7 @@ function Navbar(){
             <a href="/">Home</a>
                 <a href="/about">About</a>
                 <a href="/Contact">Contact</a>
-                <a href="/">Agents</a>
+                <a href="/agents">Agents</a>
                 <a href="/login">Sign In</a>
                 <a href="/register">Sign Up</a>
             </div>

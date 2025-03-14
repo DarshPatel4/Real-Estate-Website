@@ -1,0 +1,138 @@
+@import "../../responsive.scss";
+
+.emi-calculator {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: calc(100vh - 100px); // Account for navbar
+  overflow-y: auto; // Enable scrolling
+  margin-top: 20px; // Add space from navbar
+  
+  // Add smooth scrolling
+  scroll-behavior: smooth;
+  
+  // Custom scrollbar styling
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #fece51;
+    border-radius: 10px;
+    
+    &:hover {
+      background: darken(#fece51, 10%);
+    }
+  }
+
+  // Hide scrollbar for Firefox
+  scrollbar-width: thin;
+  scrollbar-color: #fece51 transparent;
+
+  .hero-section {
+    text-align: center;
+    padding: 60px 0;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/emi-calc-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+  }
+
+  .calculator-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    
+    @include md {
+      grid-template-columns: 1fr;
+    }
+
+    .input-section {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+      .input-group {
+        margin-bottom: 25px;
+
+        label {
+          display: block;
+          margin-bottom: 10px;
+          color: #666;
+        }
+
+        input[type="range"] {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          font-size: 1rem;
+        }
+      }
+
+      button {
+        width: 100%;
+        padding: 15px;
+        background: #fece51;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: darken(#fece51, 10%);
+        }
+      }
+    }
+
+    .results-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      .result-card {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        text-align: center;
+
+        h3 {
+          color: #666;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 1.8rem;
+          color: #fece51;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+} 
