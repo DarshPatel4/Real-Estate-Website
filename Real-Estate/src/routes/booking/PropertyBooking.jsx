@@ -30,7 +30,7 @@ const PropertyBooking = () => {
 
   const sendConfirmationEmail = () => {
     const templateParams = {
-      to_email: "darshpatel2531@gmail.com",
+      to_email: "dhruvik26804@gmail.com",
       booking_date: selectedDate,
       booking_time: selectedTime,
       property_name: "Luxury Villa",

@@ -19,6 +19,8 @@ import RatesTrends from "./routes/ratesTrends/RatesTrends";
 import EmiCalculator from "./routes/emiCalculator/EmiCalculator";
 import Reviews from "./routes/reviews/Reviews";
 import ReviewDetail from "./routes/reviewDetail/ReviewDetail";
+import CustomerSupport from "./routes/CustomerSupport/CustomerSupport"; // Import CustomerSupport
+import FAQs from "./routes/FAQs/FAQs"; // Import FAQs
 
 
 function App() {
@@ -56,6 +58,14 @@ function App() {
         {
         path: "/contact",
         element: <Contact />,
+        },
+        {
+          path: "/customer-support",
+          element: <CustomerSupport />, // Add CustomerSupport route
+        },
+        {
+          path: "/faqs",
+          element: <FAQs />, // Add FAQs route
         },
         {
           path: "/register",

@@ -1,0 +1,47 @@
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+
+  .contact-card {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        max-width: 80px;
+        transition: transform 0.3s;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+    }
+
+    &:hover .card-content img {
+      transform: rotate(10deg);
+    }
+  }
+}

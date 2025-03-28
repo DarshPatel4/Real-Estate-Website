@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./contact.scss";
 
 const Contact = () => {
@@ -13,16 +14,16 @@ const Contact = () => {
         </div>
       </div>
       <div className="contact-content">
-        <div className="contact-card">
+        <Link to="/customer-support" className="contact-card">
           <img src="/public/support.svg" alt="Support" />
           <h2>Customer Support</h2>
           <p>Need help? Our support team is here to assist you with any queries.</p>
-        </div>
-        <div className="contact-card">
+        </Link>
+        <Link to="/faqs" className="contact-card">
           <img src="/public/faq.png" alt="FAQ" />
           <h2>Frequently Asked Questions</h2>
           <p>Find answers to common questions in our FAQ section.</p>
-        </div>
+        </Link>
       </div>
     </div>
   );
