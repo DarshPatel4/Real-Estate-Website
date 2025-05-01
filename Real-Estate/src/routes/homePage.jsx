@@ -36,7 +36,7 @@ function HomePage() {
             <div className="textcontainer">
                 <div className="wrapper">
                     <h1 className="title">
-                        Find the best real estate place at Ghar Dekho
+                        Find the best real estate place at Pooja Real Estate
                     </h1>
 
                     <SearchBar />

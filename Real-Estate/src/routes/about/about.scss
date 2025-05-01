@@ -35,14 +35,14 @@
 
   // Hero Section
   .hero {
-    text-align: center;
-    padding: 60px 0;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/hero-about.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    border-radius: 15px;
-    margin-bottom: 60px;
+  text-align: center;
+  padding: 60px 0;
+  background: linear-gradient(rgba(254, 206, 81, 0.7), rgba(254, 206, 81, 0.7)), url('/hero-about.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #333; // Changed from white to dark text
+  border-radius: 15px;
+  margin-bottom: 60px;
 
     h1 {
       font-size: 3.5rem;
@@ -71,7 +71,7 @@
     gap: 60px;
     margin-bottom: 60px;
     padding: 60px 40px;
-    background-color: #f8f9fa;
+    background-color: #fff8e1;
     border-radius: 15px;
 
     @include md {
@@ -132,11 +132,11 @@
   // Stats Section
   .stats-section {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-bottom: 60px;
     padding: 40px;
-    background-color: #f8f9fa;
+    background-color: #fff8e1;
     border-radius: 15px;
 
     @include md {
@@ -176,7 +176,7 @@
 
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 30px;
 
       @include md {
@@ -216,7 +216,7 @@
   .values-section {
     margin-bottom: 60px;
     padding: 40px;
-    background-color: #f8f9fa;
+    background-color: #fff8e1;
     border-radius: 15px;
 
     h2 {

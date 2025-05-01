@@ -9,11 +9,11 @@ const ReviewDetail = () => {
   // Example data - you should fetch this based on the id
   const propertyData = {
     name: "Runwal Bliss",
-    location: "Kanjurmarg East, Mumbai",
+    location: "Kanjurmarg East, Surat",
     rating: 4.0,
     totalRatings: 1,
     price: "₹ 29,141 Per Sq. Ft Onwards",
-    image: "/property/runwal-bliss.jpg",
+    image: "/property/prop1.webp",
     ratings: {
       5: 0,
       4: 1,
@@ -32,8 +32,8 @@ const ReviewDetail = () => {
     ],
     videos: [
       {
-        thumbnail: "/property/video-thumb.jpg",
-        url: "#",
+        thumbnail: "/property/prop1.webp",
+        url: "/property/prop.mp4",
         rating: 4
       }
     ]

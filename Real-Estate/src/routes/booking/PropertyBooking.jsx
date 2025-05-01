@@ -30,12 +30,12 @@ const PropertyBooking = () => {
 
   const sendConfirmationEmail = () => {
     const templateParams = {
-      to_email: "dhruvik26804@gmail.com",
+      to_email: "darshpatel2531@gmail.com",
       booking_date: selectedDate,
       booking_time: selectedTime,
       property_name: "Luxury Villa",
-      property_address: "1234 Beverly Hills, CA 90210",
-      contact_number: "(555) 123-4567",
+      property_address: "1234 Shastri Bajar, Adajan",
+      contact_number: "9979099218",
       booking_reference: `BOOK-${Date.now().toString(36)}`,
     };
 
@@ -137,9 +137,9 @@ const PropertyBooking = () => {
         </div>
 
         <h3>Luxury Villa</h3>
-        <p>1234 Beverly Hills, CA 90210</p>
-        <p><strong>Contact:</strong> (555) 123-4567</p>
-        <p><strong>Email:</strong> contact@eliterealty.com</p>
+        <p>1234 Shastri Bajar, Adajan</p>
+        <p><strong>Contact:</strong> 9898454221</p>
+        <p><strong>Email:</strong> poojarealestate3@gmail.com</p>
       </div>
 
       {/* Add the confirmation popup */}
