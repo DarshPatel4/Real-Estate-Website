@@ -25,22 +25,6 @@ const About = () => {
         <p>Your Trusted Partner in Finding the Perfect Home</p>
       </motion.div>
 
-      {/* Mission Section */}
-      <motion.div 
-        className="mission-section"
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        {/* <div className="content">
-          <h2>Our Mission</h2>
-          <p>At Ghar Dekho, we believe everyone deserves to find their perfect home. Our mission is to make real estate accessible, transparent, and efficient for all.</p>
-        </div> */}
-        {/* <div className="image">
-          <img src="/mission.png" alt="Our Mission" />
-        </div> */}
-      </motion.div>
 
       {/* Stats Section */}
       <motion.div 
@@ -51,21 +35,21 @@ const About = () => {
         viewport={{ once: true }}
       >
         <div className="stat-item">
-          <h3>10K+</h3>
+          <h3>10+</h3>
           <p>Properties Listed</p>
         </div>
         <div className="stat-item">
-          <h3>15K+</h3>
+          <h3>12+</h3>
           <p>Happy Customers</p>
         </div>
         <div className="stat-item">
-          <h3>50+</h3>
+          <h3>2+</h3>
           <p>Cities Covered</p>
         </div>
-        <div className="stat-item">
+        {/* <div className="stat-item">
           <h3>100+</h3>
           <p>Expert Agents</p>
-        </div>
+        </div> */}
       </motion.div>
 
       {/* Team Section */}
@@ -76,7 +60,7 @@ const About = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2>Meet Our Leadership Team</h2>
+        <h2>Our Web Developer Team</h2>
         <div className="team-grid">
           {teamMembers.map((member, index) => (
             <motion.div 
@@ -147,24 +131,19 @@ const About = () => {
 // Team members data
 const teamMembers = [
   {
-    name: "John Smith",
-    position: "CEO & Founder",
-    image: "/prof1.jpeg"
+    name: "Dev Patel",
+    position: "Frontend & Backend Developer",
+    image: "/dev.jpg"
   },
   {
-    name: "Sarah Johnson",
-    position: "Head of Operations",
-    image: "/prof2.jpeg"
+    name: "Jash Parekh",
+    position: "Backend & AIML Developer",
+    image: "/Jash.jpg"
   },
   {
-    name: "Michael Brown",
-    position: "Lead Property Consultant",
-    image: "/prof3.jpeg"
-  },
-  {
-    name: "Emily Davis",
-    position: "Marketing Director",
-    image: "/prof1.jpeg"
+    name: "Darsh Patel",
+    position: "Frontend Developer",
+    image: "/darsh.jpg"
   }
 ];
 

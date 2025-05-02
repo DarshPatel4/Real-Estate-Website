@@ -1,97 +1,108 @@
 @import "../../responsive.scss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&family=Cinzel:wght@400;700&display=swap');
 
-nav{
+nav {
     font-family: var(--font-primary);
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #ffffff; // Soft white
 
-    a{
+    a {
         transition: all 0.4s ease;
+        color: #4e342e; // Dark brown
 
-        @include sm{
+        @include sm {
             display: none;
         }
-        &:hover{
+
+        &:hover {
             scale: 1.05;
+            color: #ff7043; // Dark orange on hover
         }
     }
 
-    .left{
+    .left {
         flex: 3;
         display: flex;
         align-items: center;
         gap: 50px;
 
-        .logo{
+        .logo {
             font-weight: bold;
             font-size: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
-            
-            img{
+
+            img {
                 width: 110px;
                 height: 55px;
             }
 
-            span{
-                @include md{
+            span {
+                @include md {
                     display: none;
                 }
-                @include sm{
-                    display: initial ;
+                @include sm {
+                    display: initial;
                 }
             }
         }
     }
-    .right{
+
+    .right {
         flex: 2;
         display: flex;
         align-content: center;
         justify-content: flex-end;
-        background-color: #fcf5f3;
+        background-color: #ffffff; // Soft white
         height: 100%;
 
-        @include md{
+        @include md {
             background-color: transparent;
         }
 
         a {
             padding: 12px 24px;
             text-decoration: none;
-            color: #333;
-            
+            color: #4e342e; // Dark brown
+
             &.register {
-                background-color: #fece51;
+                background-color: #ffc107; // Warm yellow
                 border-radius: 4px;
-                color: #333;
+                color: #4e342e;
                 font-weight: 500;
+
+                &:hover {
+                    background-color: #ff7043; // Dark orange
+                    color: white;
+                }
             }
         }
-        
-        .menuIcon{
+
+        .menuIcon {
             display: none;
             z-index: 999;
 
-            img{
+            img {
                 width: 36px;
                 height: 36px;
                 cursor: pointer;
             }
 
-            @include sm{
+            @include sm {
                 display: inline;
             }
         }
-        .menu{
+
+        .menu {
             position: absolute;
             top: 0;
             right: -50%;
-            background-color: black;
-            color: white;
+            background-color: #ffc107; // Warm yellow
+            color: #4e342e;
             height: 100vh;
             width: 50%;
             transition: all 1s ease;
@@ -100,13 +111,18 @@ nav{
             align-items: center;
             justify-content: center;
 
-            &.active{
-                right : 0;
+            &.active {
+                right: 0;
             }
 
-            @include sm{
-                a{
+            @include sm {
+                a {
                     display: initial;
+                    color: #4e342e;
+
+                    &:hover {
+                        color: #ff7043;
+                    }
                 }
             }
         }
