@@ -63,8 +63,8 @@ const CustomerSupport = () => {
 
       <div className="contact-options">
         <p>📞 Call us: <span>+91 98765 43210</span></p>
-        <p>📧 Email: <span>support@example.com</span></p>
-        <p>💻 Live Chat: Available 24/7</p>
+        <p>📧 Email: <span>poojarealestate3@gmail.com</span></p>
+        {/* <p>💻 Live Chat: Available 24/7</p> */}
       </div>
     </div>
   );
